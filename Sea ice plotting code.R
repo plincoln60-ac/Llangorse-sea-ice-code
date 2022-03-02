@@ -205,10 +205,6 @@ library(lattice)
 library(RColorBrewer)
 
 #upload ice shapefiles from Hughes et al. (2016)----
-TS16<-'TS16_mc.shp'
-
-paste(ncpath, TS21, sep="")
-ncpath2 <- "/Volumes/Macintosh HD/Users/paullincoln/Documents/GitHub/Llangorse-sea-ice-code/DATED1 TimeSlices shp/"
 library(rgdal)
 
 TS17<-paste(ncpath, 'TS17_mc.shp', sep="")

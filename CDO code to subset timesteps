@@ -1,0 +1,49 @@
+#Code to run analyses: Run Summer, Spring, Autumn,  Winter & mean annual.
+
+################### mean annual sea ice. Using 100yr means (i.e. mean of 10 decadal timesteps) ###################
+
+#list of timesteps in base file
+Timesteps for 17ka (i.e. 17.05-16.95 ka): 496/506
+16ka: 596/606
+15.5ka: 646/656
+15ka: 696/706
+14.5ka: 746/756
+
+#subset set ice variable from base file
+cdo selname,ICEFRAC,time decadal_mean_annual_seaice.nc ice.nc
+cdo seltimestep
+
+#calculate annual mean values
+cdo timmean -seltimestep,496/506 ice.nc 17kamean.nc
+cdo timmean -seltimestep,596/606 ice.nc 16kamean.nc
+cdo timmean -seltimestep,646/656 ice.nc 15.5kamean.nc
+cdo timmean -seltimestep,696/706 ice.nc 15kamean.nc
+cdo timmean -seltimestep,746/756 ice.nc 14.5kamean.nc
+#Autumn
+Cdo selname,ICEFRAC,time trace.01-36.22000BP.cam2.ICEFRAC.22000BP_decavgSON_400BCE.nc Autumn.nc
+cdo timmean -seltimestep,496/506 Autumn.nc 17kaAutumn.nc
+cdo timmean -seltimestep,596/606 Autumn.nc 16kaAutumn.nc
+cdo timmean -seltimestep,646/656 Autumn.nc 15.5kaAutumn.nc
+cdo timmean -seltimestep,696/706 Autumn.nc 15kaAutumn.nc 
+cdo timmean -seltimestep,746/756 Autumn.nc 14.5kaAutumn.nc 
+#Spring
+Cdo selname,ICEFRAC,time trace.01-36.22000BP.cam2.ICEFRAC.22000BP_decavgMAM_400BCE.nc Spring.nc
+cdo timmean -seltimestep,496/506 Spring.nc 17kaSpring.nc
+cdo timmean -seltimestep,596/606 Spring.nc 16kaSpring.nc
+cdo timmean -seltimestep,646/656 Spring.nc 15.5kaSpring.nc
+cdo timmean -seltimestep,696/706 Spring.nc 15kaSpring.nc 
+cdo timmean -seltimestep,746/756 Spring.nc 14.5kaSpring.nc 
+#Summer
+Cdo selname,ICEFRAC,time trace.01-36.22000BP.cam2.ICEFRAC.22000BP_decavgJJA_400BCE.nc Summer.nc
+cdo timmean -seltimestep,496/506 Summer.nc 17kaSummer.nc
+cdo timmean -seltimestep,596/606 Summer.nc 16kaSummer.nc
+cdo timmean -seltimestep,646/656 Summer.nc 15.5kaSummer.nc
+cdo timmean -seltimestep,696/706 Summer.nc 15kaSummer.nc 
+cdo timmean -seltimestep,746/756 Summer.nc 14.5kaSummer.nc 
+#Winter
+Cdo selname,ICEFRAC,time trace.01-36.22000BP.cam2.ICEFRAC.22000BP_decavgDJF_400BCE.nc Winter.nc
+cdo timmean -seltimestep,496/506 Winter.nc 17kaWinter.nc
+cdo timmean -seltimestep,596/606 Winter.nc 16kaWinter.nc
+cdo timmean -seltimestep,646/656 Winter.nc 15.5kaWinter.nc
+cdo timmean -seltimestep,696/706 Winter.nc 15kaWinter.nc 
+cdo timmean -seltimestep,746/756 Winter.nc 14.5kaWinter.nc 

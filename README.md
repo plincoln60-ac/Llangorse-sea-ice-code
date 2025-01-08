@@ -1,4 +1,4 @@
-# Llangorse sea-ice code
+# Llangorse sea-ice code (Matthews et al., 2025).
  CDO and R code used to produce seasonal and mean annual sea-ice plots from the Trace-21ka data. These analyses were produced as part of the publication by Matthews et al. (2025),_Summer warmth between 15.5 and 15 ka BP enabled human repopulation of the Northwest European Margin_. _Nature Ecology and Evolution_. NATECOLEVOL-23020330C. 
 
 **Methodology**
